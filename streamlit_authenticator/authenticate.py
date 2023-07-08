@@ -361,7 +361,7 @@ class Authenticate:
                                 raise RegisterError('User not preauthorized to register')
                         else:
                             self._register_credentials(new_username, new_name, new_password, new_email, preauthorization)
-                            return True
+                            return True, new_username
                     else:
                         raise RegisterError('Passwords do not match')
                 else:
